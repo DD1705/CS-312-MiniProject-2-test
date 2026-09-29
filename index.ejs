@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DD's Drinks-Homepage</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+	<nav><div class="brand">DD's<span> Drinks</span>.</div></nav>
+	<main>
+		<section class="heart">
+			<div>
+				<h1 class="index-title">Find your <em>perfect</em> cocktail.</h1>
+				<p class="intro">Tell us what ingredients you have and we'll find the perfect cocktail for you.</p>
+				<form action="/search" method="GET">
+					<input type="search" name="ingredient" placeholder="Search by ingredient" aria-label="Search by ingredient" required>
+					<button type="submit">SEARCH</button>
+				</form>
+			</div>
+			<div class="logo" aria-hidden="true"><div class="blob"></div><div class="drink"></div></div>
+		</section>
+		<section class="picks" id="ideas">
+			<h2>Start with a drink</h2>
+			<div class="choices"><a href="/search?ingredient=whiskey">Whiskey</a><a href="/search?ingredient=gin">Gin</a><a href="/search?ingredient=rum">Rum</a><a href="/search?ingredient=tequila">Tequila</a><a href="/search?ingredient=vodka">Vodka</a></div>
+		</section>
+	</main>
+</body>
+</html>

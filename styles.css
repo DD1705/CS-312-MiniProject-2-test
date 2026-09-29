@@ -1,0 +1,29 @@
+/* Global Styles */
+        :root { --ink: #241b2f; --white: #ffffff; --blue: #003cff; --red: #ff0000; } * { box-sizing: border-box; }
+		body { margin: 0; color: var(--ink); background: var(--white); font-family: 'Times New Roman', times, sans-serif; }
+		nav { display: flex; justify-content: space-between; align-items: center; padding: 28px 7%; }
+		.brand { font-size: 1.5rem; font-weight: 800; letter-spacing: .08em; } .brand span { color: var(--blue); }
+		nav a { color: var(--ink); text-decoration: none; font-size: .9rem; font-weight: 700; }
+/* End of Global Styles */
+/* index.ejs */
+        /* CSS Variables */
+        .heart { max-width: 1100px; margin: 45px auto 0; padding: 0 7%; display: grid; grid-template-columns: 1.1fr .9fr; gap: 50px; align-items: center; }
+		.index-title { max-width: 620px; margin: 0 0 20px; font-size: clamp(3.2rem, 7vw, 6.3rem); line-height: .92; letter-spacing: -.07em; } h1 em { color: var(--red); font-style: normal; }
+		.intro { max-width: 430px; color: #675d6d; font-size: 1.1rem; line-height: 1.6; }
+		form { display: flex; max-width: 500px; margin-top: 32px; padding: 7px; background: white; border: 1px solid #eaded7; border-radius: 16px; box-shadow: 0 12px 30px #37223812; }
+		input { min-width: 0; flex: 1; padding: 14px; border: 0; outline: 0; color: var(--ink); font-size: 1rem; }
+		button { padding: 0 24px; border: 0; border-radius: 11px; color: white; background: var(--blue); font-weight: 700; cursor: pointer; } button:hover { background: #ff0000; }
+		.logo { position: relative; display: grid; place-items: center; min-height: 380px; } .blob { width: min(330px, 80vw); height: 330px; border-radius: 48% 52% 44% 56%; background: var(--white); transform: rotate(-12deg); box-shadow: 12px 18px 0 #c54c6d33;} .drink { position: absolute; width: 180px; height: 225px; border: 8px solid white; border-top: 0; border-radius: 0 0 40px 40px; background: linear-gradient(#ffffff55 0 18%, #ff0000 19%); transform: rotate(20deg); box-shadow: 12px 18px 0 #c54c6d33; }
+		.picks { max-width: 1100px; margin: 70px auto 0; padding: 0 7% 60px; } .picks h2 { font-size: 1.8rem; margin-bottom: 22px; }
+		.choices { display: flex; flex-wrap: wrap; gap: 12px; } .choices a { padding: 13px 20px; border: 1px solid #e7d8d0; border-radius: 999px; color: var(--ink); background: white; text-decoration: none; } .choices a:hover { border-color: var(--red); color: var(--red); }
+		@media (max-width: 700px) { .heart { grid-template-columns: 1fr; margin-top: 20px; } .logo { min-height: 280px; } .blob { width: 250px; height: 250px; } .drink { transform: scale(.8) rotate(8deg); } }
+/* End of index.ejs styles */
+/*result.ejs */
+        main { max-width: 1100px; margin: 48px auto; padding: 0 7%; }
+        .result-title { margin: 0 0 28px; font-size: clamp(2rem, 5vw, 3.5rem); }
+        .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 24px; }
+        .cocktail-drinks { overflow: hidden; border: 1px solid var(--white); border-radius: 8px; }
+        .cocktail-drinks img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
+        .cocktail-drinks h2 { margin: 0; padding: 16px; font-size: 1.25rem; }
+        .message { padding: 18px 20px; border-left: 4px solid var(--red); background: var(--white); line-height: 1.5; }
+/* End of result.ejs styles */

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DD's Drinks-Results</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="brand">DD's<span> Drinks</span>.</div>
+        <a href="/">HOME</a>
+    </nav>
+
+    <main>
+
+        <!-- Page heading -->
+        <h1 class="result-title">Cocktails with <%= ingredient %></h1>
+        <% if (error) { %>
+            <p class="message"><%= error %></p>
+        <% } else if (drinks.length === 0) { %>
+            <p class="message">No cocktails found with <%= ingredient %>.</p>
+        <% } else { %>
+            <section class="results">
+                <% drinks.forEach(cocktail => { %>
+                    <article class="cocktail-drinks">
+                        <img src="<%= cocktail.strDrinkThumb %>" alt="<%= cocktail.strDrink %>" loading="lazy">
+                        <h2><%= cocktail.strDrink %></h2>
+                    </article>
+                <% }); %>
+            </section>
+        <% } %>
+    </main>
+</body>
+</html>
